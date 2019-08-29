@@ -1,16 +1,18 @@
 <template>
   <div id="app">
+    <h1>Formular</h1>
     <Form/>
   </div>
 </template>
 
 <script>
 import Form from "./components/Form";
-
+import DynamicForm from "vue-dynamic-form-component";
 export default {
   name: "App",
   components: {
-    Form
+    Form,
+    DynamicForm
   }
 };
 </script>
