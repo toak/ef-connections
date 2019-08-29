@@ -1,0 +1,6 @@
+{
+  "alias": ["ef-connections"],
+  "version": 2,
+  "name": "ef-connections",
+  "builds": [{"src": "package.json", "use": "@now/static-build"}]
+}
