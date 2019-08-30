@@ -23,7 +23,7 @@ export default {
         },
         loc_to: {
           type: "enum",
-          label: "Am öftesten arbeite ich mit:",
+          label: "Am öftesten arbeite ich mit (außer des eigenen Bereichs/Standorts):",
           placeholder: "Bitte wählen",
           required: true,
           message:
@@ -47,7 +47,20 @@ export default {
   methods: {
     async validate() {
       const valid = await this.$refs["dynamic-form"].validate();
-      window.alert(`valid result ====> ${valid}`);
+      if (valid === true) {
+        this.$http
+          .post("https://lernen.toak.de/api/send", this.data)
+          .then(function(response) {
+            if (response.body.success === "1") {
+              window.alert("Danke / Thanks!\n\nYou will be forwarded to the results now.");
+              window.location = "http://maps.google.com";
+            } else {
+              window.alert(`${response.body.message}`);
+            }
+          });
+      } else {
+        window.alert("Fehler");
+      }
     }
   },
   created() {
