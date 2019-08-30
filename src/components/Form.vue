@@ -23,7 +23,8 @@ export default {
         },
         loc_to: {
           type: "enum",
-          label: "Am öftesten arbeite ich mit (außer des eigenen Bereichs/Standorts):",
+          label:
+            "Am öftesten arbeite ich mit (außer des eigenen Bereichs/Standorts):",
           placeholder: "Bitte wählen",
           required: true,
           message:
@@ -52,8 +53,10 @@ export default {
           .post("https://lernen.toak.de/api/send", this.data)
           .then(function(response) {
             if (response.body.success === "1") {
-              window.alert("Danke / Thanks!\n\nYou will be forwarded to the results now.");
-              window.location = "http://maps.google.com";
+              window.alert(
+                "Danke / Thanks!\n\nYou will be forwarded to the results now."
+              );
+              window.location = "https://ef-connections.now.sh/map.html";
             } else {
               window.alert(`${response.body.message}`);
             }
