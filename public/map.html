@@ -16,12 +16,36 @@
         margin: 0;
         padding: 0;
       }
+      div#bar {
+        background-color: #fff;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 700px;
+        height: 40px;
+        padding: 10px;
+        border: 3px solid #EA4335;
+        text-align: center;
+        font-family: Calibri;
+      }
     </style>
+    <script>
+    var map;
+    function moveToLocation(lat, lng, zoom){
+      var center = new google.maps.LatLng(lat, lng);
+      map.panTo(center);
+      map.setZoom(zoom);
+    }
+    </script>
   </head>
   <body>
     <div id="map"></div>
-    <script src="https://lernen.toak.de/api/connections">
-    </script>
+    <div id="bar">
+      <b>eurofunk - Connections!</b><br />
+      Show: <a href="javascript:moveToLocation(37.218496, 39.553531, 4);">All location</a> | <a href="javascript:moveToLocation(47.874279, 14.585383, 8);">Austria</a> | <a href="javascript:moveToLocation(47.343035, 13.201117, 19);">St. Johann</a> | <a href="/">Deine Verbindung / Your connection? Fill the survey!</a>
+    </div>
+    <script src="https://lernen.toak.de/api/connections"></script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaDlgVA5CmPdBKCy6n4HgZGiEmq5FgHMk&callback=initMap">
     </script>
