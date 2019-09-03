@@ -1,7 +1,7 @@
 <template>
   <dynamic-form ref="dynamic-form" v-model="data" :descriptors="descriptors">
     <template slot="operations">
-      <el-button type="primary" @click="validate">validate</el-button>
+      <el-button type="primary" @click="validate">Absenden / Submit</el-button>
     </template>
   </dynamic-form>
 </template>
@@ -13,7 +13,7 @@ export default {
       descriptors: {
         loc_from: {
           type: "enum",
-          label: "Ich gehöre zu:",
+          label: "Ich gehöre zu / I belong to:",
           placeholder: "Bitte wählen",
           required: true,
           message:
@@ -28,13 +28,14 @@ export default {
           placeholder: "Bitte wählen",
           required: true,
           message:
-            "Du musst angeben, mit wem du außerhalb deines Bereiches am meisten arbeitest!",
+            "Du musst angeben, mit wem du außerhalb deines Bereichs/Standorts am meisten arbeitest!",
           enum: [],
           options: []
         },
         myvalue: {
           type: "enum",
-          label: "Dabei ist mir folgendes am Wichtigsten:",
+          label:
+            "Dabei ist mir folgendes am Wichtigsten / What is most important for you:",
           placeholder: "Bitte wählen",
           required: true,
           message: "Du musst etwas auswählen!",
