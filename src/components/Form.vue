@@ -13,7 +13,7 @@ export default {
       descriptors: {
         loc_from: {
           type: "enum",
-          label: "Ich gehöre zu / I belong to:",
+          label: "Ich gehöre zu folgendem Bereich: / I belong to the following devision:",
           placeholder: "Bitte wählen",
           required: true,
           message:
@@ -24,7 +24,7 @@ export default {
         loc_to: {
           type: "enum",
           label:
-            "Am öftesten arbeite ich mit (außer des eigenen Bereichs/Standorts):",
+            "Am öftesten arbeite ich mit / Most often I wourk with:",
           placeholder: "Bitte wählen",
           required: true,
           message:
@@ -35,7 +35,7 @@ export default {
         myvalue: {
           type: "enum",
           label:
-            "Dabei ist mir folgendes am Wichtigsten / What is most important for you:",
+            "Dabei ist mir Folgendes am wichtigsten / What is most important for you:",
           placeholder: "Bitte wählen",
           required: true,
           message: "Du musst etwas auswählen!",
@@ -55,7 +55,7 @@ export default {
           .then(function(response) {
             if (response.body.success === "1") {
               window.alert(
-                "Danke / Thanks!\n\nYou will be forwarded to the results now."
+                "Danke / Thanks!\n\n•	„Du wirst zu den Ergebnissen weitergeleitet.\nYou will be forwarded to the results."
               );
               window.location = "https://ef-connections.now.sh/map.html";
             } else {
