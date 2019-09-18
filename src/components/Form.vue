@@ -55,7 +55,7 @@ export default {
           .then(function(response) {
             if (response.body.success === "1") {
               window.alert(
-                "Danke / Thanks!\n\n•	„Du wirst zu den Ergebnissen weitergeleitet.\nYou will be forwarded to the results."
+                "Danke / Thanks!\n\nDu wirst zu den Ergebnissen weitergeleitet.\nYou will be forwarded to the results."
               );
               window.location = "https://ef-connections.now.sh/map.html";
             } else {
