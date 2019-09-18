@@ -13,7 +13,7 @@ export default {
       descriptors: {
         loc_from: {
           type: "enum",
-          label: "Ich gehöre zu folgendem Bereich: / I belong to the following devision:",
+          label: "Ich gehöre zu folgendem Bereich: / I belong to the following division:",
           placeholder: "Bitte wählen",
           required: true,
           message:
@@ -24,7 +24,7 @@ export default {
         loc_to: {
           type: "enum",
           label:
-            "Am öftesten arbeite ich mit / Most often I wourk with:",
+            "Am öftesten arbeite ich mit / Most often I work with:",
           placeholder: "Bitte wählen",
           required: true,
           message:
